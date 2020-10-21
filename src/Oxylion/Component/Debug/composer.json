@@ -1,0 +1,36 @@
+{
+    "name": "oxylion/debug",
+    "type": "library",
+    "description": "the \"Oxylion Debug Exception\" handler.",
+    "prefer-stable": true,
+    "license": "MIT",
+    "authors": [{
+        "name": "Bartosz Zwski",
+        "email": "duwless@outlook.com"
+    }],
+    "require": {
+        "php": ">=7.0 || ^8.0",
+        "ext-mbstring": "*",
+        "symfony/var-dumper": "5.1-dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0-dev",
+        "phpbench/phpbench": "^0.13"
+    },
+    "conflict": {
+        "php": "<7.0"
+    },
+    "suggest": {
+        "ext-mbstring": "Multibyte string var container"
+    },
+    "autoload": {
+        "psr-4": { "Oxylion\\Component\\Debug\\": "" },
+        "exclude-from-classmap": ["/Tests/"]
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.2-dev"
+        }
+    }
+}
