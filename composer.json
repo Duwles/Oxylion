@@ -1,0 +1,78 @@
+{
+    "name": "oxylion/oxylion",
+    "type": "library",
+    "description": "",
+    "keywords": [],
+    "homepage": "",
+    "license": "MIT",
+    "authors": [{
+        "name": "Bartosz Zwski",
+        "email": "duwless@outlook.com"
+    }],
+    "support": {
+        "issues": "https://github.com/sebastianbergmann/version/issues"
+    },
+
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-intl": "*",
+        "ext-PDO": "*",
+        "ext-phar": "*",
+        "ext-mbstring": "*",
+        "ext-yaml": "*",
+        "psr/container": "1.0.0",
+        "psr/event-dispatcher": "1.0.0",
+        "psr/log": "1.1.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "dev-master",
+        "symfony/console": "v5.1.7",
+        "symfony/yaml": "v5.1.7",
+        "symfony/var-dumper": "v5.1.7"
+    },
+
+    "bin": [
+        "src/Resources/bin/foreman"
+    ],
+    "autoload": {
+        "files": [
+            "src/Component/functional.php"
+        ],
+        "psr-4": {
+            "": "src/",
+            "Oxylion\\Component\\": "src/Oxylion/Component/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\Oxylion\\Component\\": "tests/"
+        }
+    },
+
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "platform": {
+            "php": "7.4.5"
+        },
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "conflict": {
+        "symfony/var-dumper": "<5.0"
+    },
+    "suggest": {
+        "symfony/var-dumper": "For var and obj content preaty browse."
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.2-dev"
+        }
+    },
+    "scripts": {
+        "oxylion-scr": [
+            "foreman -v"
+        ],
+        "post-create-project-cmd": "@oxylion-scr"
+    }
+}

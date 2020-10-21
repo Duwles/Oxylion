@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="../../phpunit.xsd"
+         verbose="true"
+         colors="true"
+         cacheResult="false">
+    <testsuites>
+        <testsuite name="oxylion">
+            <directory suffix="Test.php">unit</directory>
+            <directory suffix=".phpt">integration</directory>
+        </testsuite>
+    </testsuites>
+
+    <php>
+        <const name="PHPUNIT_TESTSUITE_OXYLION" value="true"/>
+    </php>
+</phpunit>
+
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="phpunit.xsd"
+         bootstrap="tests/bootstrap.php"
+         colors="true"
+         verbose="true"
+         cacheResultFile="cache/phpunit/.phpunit.cache"
+         failOnRisky="false"
+         failOnWarning="false">
+    <testsuites>
+        <testsuite name="unit">
+            <directory suffix="Test.php">tests/unit</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage cacheDirectory="cache/phpunit/code-coverage"
+              processUncoveredFiles="true"
+              ignoreDeprecatedCodeUnits="true">
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+    </coverage>
+
+    <php>
+        <const name="PHPUNIT_TESTSUITE" value="true"/>
+    </php>
+</phpunit>
