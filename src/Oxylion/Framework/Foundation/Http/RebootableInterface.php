@@ -1,14 +1,13 @@
 <?php
 /*
- * This file is part of the Atlax package.
+ * This file is part of the Oxylion package.
  *
  * (c) Bartosz Zwski <duwless@outlook.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
-namespace Atlax\Component\HttpKernel;
+namespace Oxylion\Framework\Foundation\Http;
 
 interface RebootableInterface
 {
@@ -20,5 +19,5 @@ interface RebootableInterface
      *
      * @param string|null $warmup_dir pass null to reboot in the regular cache directory
      */
-    public function reboot(?string $warmup_dir);
+    public function reboot(string $warmup_dir);
 }

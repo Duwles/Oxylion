@@ -1,5 +1,4 @@
 <?php
-namespace Oxylion\Foundation\Providers;
 /*
  * This file is part of the Oxylion package.
  *
@@ -8,6 +7,8 @@ namespace Oxylion\Foundation\Providers;
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+namespace Oxylion\Framework\Support;
+
 abstract class ServiceProvider
 {
     protected array $config = [];

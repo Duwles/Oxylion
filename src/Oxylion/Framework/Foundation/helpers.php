@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php
 /*
  * This file is part of the Oxylion package.
  *
@@ -7,11 +7,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Oxylion\Foundation\Support { }
+namespace Oxylion\Framework\Foundation { }
 
 namespace
 {
-    use Oxylion\Component\Application\Application;
+    use Oxylion\Framework\Foundation\Application;
 
     if (!function_exists('app')) {
         /**
@@ -43,7 +43,7 @@ namespace
                     throw new ErrorException("Undefined error in function env();");
                 }
             } else {
-                throw new ErrorException("function env(); send Undefined fatal error.");
+                throw new InvalidArgumentException("function env(); send Undefined fatal error.");
             }
         }
     }

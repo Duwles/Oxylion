@@ -7,8 +7,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
-namespace Atlax\Component\HttpKernel;
+namespace Oxylion\Framework\Foundation\Http;
 
 final class KernelEvents
 {

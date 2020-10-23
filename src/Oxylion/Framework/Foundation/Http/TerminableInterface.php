@@ -7,11 +7,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+namespace Oxylion\Framework\Foundation\Http;
 
-namespace Oxylion\Component\HttpKernel;
-
-use Oxylion\Component\HttpFoundation\Request;
-use Oxylion\Component\HttpFoundation\Response;
+use Oxylion\Framework\Http\{Response, Request};
 
 interface TerminableInterface
 {
