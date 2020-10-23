@@ -24,5 +24,5 @@ class Application
 
     private function __construct() { }
     private function __clone()     { }
-    protected function __wakeup()    { }
+    protected function __wakeup()  { }
 }

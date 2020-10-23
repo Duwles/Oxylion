@@ -26,10 +26,10 @@ class Debug
         }
 
         if ('cli' !== PHP_SAPI) {
-            ini_set('display_errors', 0);
+            ini_set('display_errors', "off");
         }
         elseif ($errorDisplay && (!ini_get('log_errors') || ini_get('error_log'))) {
-            ini_set('display_errors', 1);
+            ini_set('display_errors', "on");
         }
 
     }

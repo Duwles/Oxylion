@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the Atlax package.
+ * This file is part of the Oxylion package.
  *
  * (c) Bartosz Zwski <duwless@outlook.com>
  *
