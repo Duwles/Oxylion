@@ -11,7 +11,7 @@ namespace Oxylion\Framework\Foundation;
 
 class Application
 {
-    private static ?Application $instance = null;
+    protected static ?Application $instance = null;
 
     public static function make(): Application
     {
